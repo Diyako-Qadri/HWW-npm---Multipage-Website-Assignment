@@ -1,13 +1,12 @@
-function Exercise (name, muscle, duration, type,instruction){
+function Exercise (name, muscle, duration, type){
     this.name= name,
     this.muscle= muscle,
     this.duration= duration,
-    this.type= type,
-    this.instruction= instruction
+    this.type= type
 }
 
 const pullExercises = [
-    new Exercise("Pull-Up", "Back", "3 sets x 10-12 reps", "Bodyweight","https://www.youtube.com/embed/aAggnpPyR6E?si=twWbv8v24HqsCQ3a"),
+    new Exercise("Pull-Up", "Back", "3 sets x 10-12 reps", "Bodyweight"),
     new Exercise("Lat Pulldown", "Back", "3 sets x 10-12 reps", "Machine"),
     new Exercise("Bent Over Barbell Row", "Back", "3 sets x 10-12 reps", "Free Weight"),
     new Exercise("Seated Cable Row", "Back", "3 sets x 10-12 reps", "Machine"),
