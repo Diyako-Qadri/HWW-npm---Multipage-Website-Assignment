@@ -3,71 +3,48 @@
         <% if(Array.isArray(programs)){ %>
             <% programs.forEach(program=> { %>
                 <div class="leon">
-                    <h3>
-                        <%= program.name %>
-                    </h3>
-                    <p> Type: <%= program.athleteTyPe %>
-                    </p>
-                    <p> Intencity: <%= program.volume %>
-                    </p>
-                    <p> Purpose: <%= program.style %>
-                    </p>
-                    <p> Equipment: <%= program.equiPment %>
-                    </p>
-                    <h4> descriPtion: <%= program.descriPtion %>
-                    </h4>
+                    <h3><%= program.name %></h3>
+                    <p> Type: <%= program.athleteTyPe %></p>
+                    <p> Intencity: <%= program.volume %> </p>
+                    <p> Purpose: <%= program.style %></p>
+                    <p> Equipment: <%= program.equiPment %></p>
+                    <h4> descriPtion: <%= program.descriPtion %></h4>
                 </div>
-                <% })%>
-                    <% } else { %>
-                        <div class="program-container">
-                            <h3>
-                                <%= programs.name %>
-                            </h3>
-                            <p> Athlete Type: <%= programs.athleteType %>
-                            </p>
-                            <p>
-                                <%= programs.sessionsPerWeek %> session per week
-                            </p>
-                            <p> Purpose: <%= programs.style %>
-                            </p>
-                            <p> Equipment: <%= programs.equipment %>
-                            </p>
-                            <h4>
-                                <%= programs.description %>
-                            </h4>
-                           <img src=<%= programs.image %> alt="">
-                            <button class="program-btn"> 40$/MONTH</button>
-                        </div>
-                        <% } %>
-                            <% } else if (locals.exercises) { %>
-                                <% exercises.forEach(exercise=> { %>
-                                    <div class="exercise-container">
-                                        <p>
-                                            <%= exercises.indexOf(exercise) + 1 %>
-                                                <p>Name: <%= exercise.name %>
-                                                </p>
-                                        </p>
-                                        <p>Muscle Targeted: <%= exercise.muscle %>
-                                        </p>
-                                        <p>Duration: <%= exercise.duration %>
-                                        </p>
-                                        <p>Type: <%= exercise.type %>
-                                        </p>
-
-                                    </div>
-                                    <% }) %>
-                                        <% } else if (locals.about) { %>
-                                                <%- include("./about.ejs") %>
-                                            <% } else { %>
-                                                <div class="home-display">HWW is trainer Diyako's personal mantra. It
-                                                    embodies endurance, grit, unwavering focus, and greatness. While it
-                                                    was born in the gym and on the competition floor, it seeps into
-                                                    every aspect of our lives.</div>
-                                                    <div>
-                                                        <img src="./../../public/image/gamesathletecolor.png" alt="">
-                                                        <img src="./../../public/image/cardio.png" alt="">
-                                                        <img src="./../../public/image/gamesathletecolor.png" alt="">
-                                                    </div>
-                                                    
-                                                <% } %>
+        <% })%>
+    <% } else { %>
+                <div class="program-container">
+                    <h3> <%= programs.name %></h3>
+                    <p> Athlete Type: <%= programs.athleteType %></p>
+                    <p> <%= programs.sessionsPerWeek %> session per week</p>
+                    <p> Purpose: <%= programs.style %></p>
+                    <p> Equipment: <%= programs.equipment %></p>
+                    <h4><%= programs.description %></h4>
+                    <img src=<%=programs.image %> alt="">
+                    <button class="program-btn"> 40$/MONTH</button>
+                </div>
+        <% } %>
+    <% } else if (locals.exercises) { %>
+        <% exercises.forEach(exercise=> { %>
+                <div class="exercise-container">
+                    <p><%= exercises.indexOf(exercise) + 1 %>
+                        <p>Name: <%= exercise.name %></p>
+                    </p>
+                    <p>Muscle Targeted: <%= exercise.muscle %></p>
+                    <p>Duration: <%= exercise.duration %></p>
+                    <p>Type: <%= exercise.type %></p>
+                </div>
+        <% }) %>
+    <% } else if (locals.about) { %>
+               <%- include("./about.ejs") %>
+             <% } else { %>
+                <div class="home-display">
+                    <p>HWW is trainer Diyako's personal mantra. It
+                         embodies endurance, grit, unwavering focus, and greatness.
+                         While it
+                         was born in the gym and on the competition floor, it seeps
+                         into
+                         every aspect of our lives.
+                    </p>
+                </div>
+        <% } %>
 </section>

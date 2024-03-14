@@ -43,10 +43,24 @@ h1 {
 }
 
 .home-display {
+  background: url(./../image/backgroundimgBW.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+  opacity: .69;
   align-self: center;
   color: var(--primary-text-color);
   font-size: 2rem;
   padding: 40px;
+  height: 99%;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+}
+
+.home-display p {
+  backdrop-filter: blur(2px);
+ margin-top: 30%;
 }
 
 .program-container {
@@ -62,6 +76,17 @@ h1 {
   color: var(--gold-color);
   font-size: 24px;
 }
+
+.homeImage{
+  width: 400px;
+  height: 500px;
+  opacity: .4;
+}
+
+.homeImage:hover {
+  opacity: 1;
+}
+
 
 .exercise-container {
   border: 1px solid var(--gold-color);
